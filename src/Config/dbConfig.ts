@@ -10,7 +10,7 @@ connection.on("connected", ()=> {
     console.log("CONNECTED TO MONGODB :)")
 })
 connection.on("error", (err)=> {
-    console.log("mongodb connection ERROR :(" + err)
+    console.log("MONGO db connection ERROR :(" + err)
     process.exit()
 })
     }catch(error){
