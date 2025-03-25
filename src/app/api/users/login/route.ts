@@ -38,7 +38,9 @@ export async function POST(request: NextRequest){
   })
 
   response.cookies.set("token", token, {
-    httpOnly: true
+    httpOnly: true,
+    path: "/",  // Ensures the cookie is available throughout the app
+    maxAge: 24 * 60 * 60,  // 1 day
   })
 
   return response
